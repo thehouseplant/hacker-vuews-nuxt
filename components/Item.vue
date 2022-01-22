@@ -22,7 +22,7 @@
           Posted {{ timeAgo }}
         </span>
         <span v-if="commentsCount > 0">
-          | <NuxtLink to="/">{{ commentsCount }}</NuxtLink> comments
+          | <NuxtLink class="underline" :to="`/item/${id}`">{{ commentsCount }} comments</NuxtLink>
         </span>
       </small>
     </p>
