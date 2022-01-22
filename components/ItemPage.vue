@@ -1,14 +1,13 @@
 <template>
-  <span>
-    <span>
-      <a class="underline" :href="url" target="_blank">{{ title }}</a> ({{ domain }})
-    </span>
+  <div>
+    <h1>{{ item.title }}</h1>
     <p>
-      <small>
-        {{ points }} by {{ user }} {{ timeAgo }} | {{ commentsCount }} comments
-      </small>
+      {{ item.content }}
     </p>
-  </span>
+    <p v-for="comment in item.comments" :key="comment.id">
+      {{ comment.contents }}
+    </p>
+  </div>
 </template>
 
 <script>
