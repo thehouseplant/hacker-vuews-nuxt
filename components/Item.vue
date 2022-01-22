@@ -1,11 +1,29 @@
 <template>
   <span>
     <span>
-      <a class="underline" :href="url" target="_blank">{{ title }}</a> ({{ domain }})
+      <span>
+        <a class="underline" :href="url" target="_blank">
+          {{ title }}
+        </a>
+      </span>
+      <span v-if="domain">
+        ({{ domain }})
+      </span>
     </span>
     <p>
       <small>
-        {{ points }} by {{ user }} {{ timeAgo }} | {{ commentsCount }} comments
+        <span v-if="points">
+          {{ points }} points
+        </span>
+        <span v-if="user">
+          by {{ user }} |
+        </span>
+        <span>
+          Posted {{ timeAgo }}
+        </span>
+        <span v-if="commentsCount > 0">
+          | <NuxtLink to="/">{{ commentsCount }}</NuxtLink> comments
+        </span>
       </small>
     </p>
   </span>
@@ -47,21 +65,6 @@ export default {
     url: {
       type: String,
       required: true
-    }
-  },
-  data () {
-    return {
-      data: []
-    }
-  },
-  beforeMount () {
-    // this.getPost()
-  },
-  methods: {
-    async getPost () {
-      const res = await fetch(`https://api.hackerwebapp.com/news/${this.$props.id}`)
-      const data = await res.json()
-      this.data = data
     }
   }
 }
