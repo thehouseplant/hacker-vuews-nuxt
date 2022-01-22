@@ -1,10 +1,13 @@
 <template>
   <span>
-    <a class="underline" :href="url">{{ title }}</a> ({{ domain }})
-    <br />
-    <small>
-      {{ points }} by {{ user }} {{ timeAgo }} | {{ commentsCount }} comments
-    </small>
+    <span>
+      <a class="underline" :href="url" target="_blank">{{ title }}</a> ({{ domain }})
+    </span>
+    <p>
+      <small>
+        {{ points }} by {{ user }} {{ timeAgo }} | {{ commentsCount }} comments
+      </small>
+    </p>
   </span>
 </template>
 
