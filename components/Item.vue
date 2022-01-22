@@ -16,7 +16,7 @@
           {{ points }} points
         </span>
         <span v-if="user">
-          by {{ user }} |
+          by <NuxtLink class="underline" :to="`/user/${user}`">{{ user }}</NuxtLink> |
         </span>
         <span>
           Posted {{ timeAgo }}
