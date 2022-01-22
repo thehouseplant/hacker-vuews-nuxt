@@ -2,7 +2,7 @@
   <div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content">
     <div class="flex-none px-2 mx-2">
       <span class="text-lg font-bold">
-        Hacker Nuews
+        Hacker Vuews
       </span>
     </div>
     <div class="flex-1 px-2 mx-2">
