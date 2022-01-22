@@ -15,7 +15,7 @@
           :domain="item.domain"
           :url="item.url"
         />
-        <div class="divider"></div>
+        <div class="divider" />
       </li>
     </ul>
   </div>
