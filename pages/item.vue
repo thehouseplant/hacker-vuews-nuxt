@@ -1,5 +1,5 @@
 <template>
-  <div />
+  <ItemPage />
 </template>
 
 <script>
