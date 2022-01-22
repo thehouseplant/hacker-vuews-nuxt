@@ -1,5 +1,5 @@
 <template>
-  <span>Hello, world!</span>
+  <ItemList />
 </template>
 
 <script>
