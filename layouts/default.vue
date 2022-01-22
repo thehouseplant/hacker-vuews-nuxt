@@ -2,14 +2,19 @@
   <div>
     <Navbar />
     <Nuxt />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 export default {
-  name: 'DeFault',
-  components: { Navbar }
+  name: 'DefaultLayout',
+  components: {
+    Navbar,
+    Footer
+  }
 }
 </script>
